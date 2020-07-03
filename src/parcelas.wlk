@@ -36,6 +36,9 @@ class Parcela {
 	method cantidadDePlantas(){
 		return plantas.size()
 	}
+	
+	
+	
 }
 class ParcelaEcologica  inherits Parcela{
 	method asociaBienPara(unaPlanta){
