@@ -15,6 +15,7 @@ object inta {
 	method parcelasConMasDeCuatroPlantas(){
 		return parcelas.fiter({p => p.cantidadDePlantas() > 4})
 	} 
+	
 	method mejorAsociada(){
         		return parcelas.max({par=>par.bienAsociadas()})
     }

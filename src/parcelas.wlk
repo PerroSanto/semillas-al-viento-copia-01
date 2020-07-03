@@ -37,7 +37,14 @@ class Parcela {
 		return plantas.size()
 	}
 	
-	
+	method cantidadDeBienAsociadas(){
+        		return plantas.count({planta=>planta.asociaBienPara(self)})
+    }
+
+    	method porcentajeDeBienAsociadas(){
+        		return (self.cantidadDeBienAsociadas()*100)/self.plantas()
+    }
+
 	
 }
 class ParcelaEcologica  inherits Parcela{
