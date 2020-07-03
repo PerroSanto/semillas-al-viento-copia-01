@@ -17,6 +17,6 @@ object inta {
 	} 
 	
 	method mejorAsociada(){
-        		return parcelas.max({par=>par.bienAsociadas()})
+        		return parcelas.max({p => p.porcentajeDeBienAsociadas()})
     }
 }
