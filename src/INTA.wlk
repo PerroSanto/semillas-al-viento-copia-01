@@ -9,14 +9,11 @@ object inta {
 	}
 
 	method parcelaMasAutosustentable(){
-		return self.parcelasConMasDeCuatroPlantas().max({parcela => parcela.porcentajeDeBienAsociadas()})
+		return self.parcelasConMasDeCuatroPlantas().max({p => p.porcentajeDeBienAsociadas()})
 	}
 	
 	method parcelasConMasDeCuatroPlantas(){
 		return parcelas.fiter({p => p.cantidadDePlantas() > 4})
 	} 
 	
-	method mejorAsociada(){
-        		return parcelas.max({p => p.porcentajeDeBienAsociadas()})
-    }
 }
