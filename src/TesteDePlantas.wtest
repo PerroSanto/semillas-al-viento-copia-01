@@ -1,0 +1,18 @@
+import plantas.*
+import parcelas.*
+
+test "test de Plantas" {
+
+    const menta1 = new Menta(altura = 1)
+    const menta2 = new Menta(altura = 0.3)
+    assert.that(menta1.daNuevasSemilla())
+    assert.notThat(menta2.daNuevasSemilla())
+    assert.equals(2, menta1.espacioOcupado())
+    assert.equals(1.3, menta2.espacioOcupado())
+    
+    const quinoa1 = new Quinoa(altura = 0.2, anioDeObtencion = 2010, espacioOcupado = 0.2)
+    assert.that(quinoa1.daNuevasSemilla())
+    const quinoa2 = new Quinoa(altura = 0.9, anioDeObtencion = 2006, espacioOcupado = 0.2)
+    assert.that(quinoa2.daNuevasSemilla())
+   
+    }
