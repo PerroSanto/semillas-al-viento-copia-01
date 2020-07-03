@@ -38,11 +38,11 @@ class Parcela {
 	}
 	
 	method cantidadDeBienAsociadas(){
-        		return plantas.count({planta=>planta.asociaBienPara(self)})
+        		return plantas.count({planta => self.asociaBienPara(planta)})
     }
 
     	method porcentajeDeBienAsociadas(){
-        		return (self.cantidadDeBienAsociadas()*100)/self.plantas()
+        		return self.cantidadDeBienAsociadas() * 100 / self.cantidadDePlantas()
     }
 
 	
